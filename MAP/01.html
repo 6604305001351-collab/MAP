@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>แผนที่ AED</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>แผนที่แสดงตำแหน่ง AED</h2>
+
+<div class="map-container">
+  <img src="img/SRU-MAP.png" class="map">
+
+  <!-- กล่องสีแดง (แทนหมุด) -->
+  <div class="test-pin"
+       style="top:40%; left:55%;"
+       onclick="showInfo('จุดทดสอบ','ตรงนี้คือจุดที่ต้องกด')">
+    กด
+  </div>
+</div>
+
+<!-- popup -->
+<div id="popup">
+  <span onclick="closePopup()">×</span>
+  <p id="popup-text"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
