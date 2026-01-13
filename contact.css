@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 34px;
+  color: #6b2b2b;
+}
+
+.logo-text h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.logo-text span {
+  font-size: 11px;
+  color: #777;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+}
+
+.nav a.active {
+  border-bottom: 2px solid #6b2b2b;
+  padding-bottom: 4px;
+}
+
+.btn {
+  border: 1px solid #6b2b2b;
+  background: white;
+  color: #6b2b2b;
+  padding: 7px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn.dark {
+  background: #6b2b2b;
+  color: white;
+}
+
+/* ===== CONTENT ===== */
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h1 {
+  font-size: 28px;
+  margin-top: 0;
+}
+
+.contact-info .org {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contact-info p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 6px 0;
+}
+
+.contact-map {
+  flex: 1.6;
+}
+
+.contact-map img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}

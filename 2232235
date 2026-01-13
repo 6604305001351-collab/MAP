@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบแสดงสถานที่และตำแหน่ง</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-left">
+    <img src="img/SRU-MAPpdf-removebg-preview.png" class="logo">
+    <div class="header-text">
+      <h2>ศูนย์สุขภาพชุมชนมหาวิทยาลัยราชภัฏสุราษฎร์ธานี</h2>
+      <p>Suratthani Rajabhat University Community Health Center</p>
+    </div>
+  </div>
+  <div class="header-right">
+    <a href="#"><img src="img/Facebook.png"></a>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="index.html">หน้าแรก</a></li>
+    <li><a href="#">เกี่ยวกับศูนย์</a></li>
+    <li><a href="#">บุคลากร</a></li>
+    <li><a href="#">จุดให้บริการ</a></li>
+    <li><a href="contact.html">ติดต่อเรา</a></li>
+  </ul>
+</nav>
+
+<!-- BANNER -->
+<div class="page-banner">
+  <h1>📍 ระบบแสดงสถานที่และตำแหน่ง</h1>
+</div>
+
+<!-- CONTENT -->
+<div class="app">
+
+  <!-- MAP -->
+  <div class="map-header">
+    <img src="img/mappingg0123.png" alt="แผนที่อาคาร">
+    <div class="map-overlay">
+      <button class="map-btn">🗺 แผนที่อาคาร</button>
+    </div>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input id="searchInput" placeholder="ค้นหาสถานที่ / รายละเอียด">
+
+    <select id="building">
+      <option value="">ทุกอาคาร</option>
+      <option value="ตึกพยาบาล">ตึกพยาบาล</option>
+      <option value="ตึกวิทย์">ตึกวิทย์</option>
+    </select>
+
+    <select id="floor">
+      <option value="">ทุกชั้น</option>
+      <option value="1">ชั้น 1</option>
+      <option value="2">ชั้น 2</option>
+      <option value="3">ชั้น 3</option>
+    </select>
+
+    <button class="search-btn" onclick="searchData()">🔍 ค้นหา</button>
+    <button class="reset-btn" onclick="resetData()">🔄 Reset</button>
+  </div>
+
+  <!-- RESULT COUNT -->
+  <div id="resultCount" style="margin:10px 0;font-weight:500;"></div>
+
+  <!-- LOADING -->
+  <div class="loading" id="loading">⏳ กำลังค้นหา...</div>
+
+  <!-- TABLE -->
+  <table id="resultTable">
+    <thead>
+      <tr>
+        <th>สถานที่</th>
+        <th>ตำแหน่ง</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- CARD (MOBILE) -->
+  <div id="cardList"></div>
+
+</div>
+
+<script src="script.js"></script>
+<footer class="site-footer">
+  <div class="footer-top">
+
+    <div class="footer-col">
+      <h4>เกี่ยวกับศูนย์สุขภาพชุมชน</h4>
+      <ul>
+        <li><a href="#">ประวัติ</a></li>
+        <li><a href="#">การบริหารงาน</a></li>
+        <li><a href="#">ภารกิจและบทบาท</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Link ที่น่าสนใจ</h4>
+      <ul>
+        <li><a href="#">ประกาศจัดซื้อจัดจ้าง</a></li>
+        <li><a href="#">ระบบจัดซื้อจัดจ้างอิเล็กทรอนิกส์</a></li>
+        <li><a href="#">ปฏิทินกิจกรรม</a></li>
+        <li><a href="#">ร่วมงานกับเรา</a></li>
+        <li><a href="#">ติดต่อเรา</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 เพิ่มคอลัมน์ใหม่ -->
+    <div class="footer-col">
+      <h4>ข้อมูลติดต่อ</h4>
+      <ul>
+        <li>📍 มรภ.สุราษฎร์ธานี</li>
+        <li>📞 077-xxx-xxx</li>
+        <li>📧 healthcenter@sru.ac.th</li>
+        <li>⏰ จ.-ศ. 08:30–16:30</li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-center">
+      <div class="hotline">📞 1664</div>
+      <p class="hotline-text">สายด่วนบริการสุขภาพ</p>
+
+      <div class="social">
+        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="img/youtube.png" alt="YouTube"></a>
+      </div>
+
+      <div class="partner">
+        <img src="img/ifrc.png" alt="IFRC">
+        <img src="img/icrc.png" alt="ICRC">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © ศูนย์สุขภาพชุมชน มหาวิทยาลัยราชภัฏสุราษฎร์ธานี |
+    <a href="#">นโยบายคุ้มครองข้อมูลส่วนบุคคล</a> |
+    <a href="#">นโยบายคุกกี้</a> |
+    <a href="#">ข้อตกลงการใช้งาน</a>
+  </div>
+</footer>
+
+</body>
+</html>
